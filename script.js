@@ -14,10 +14,10 @@ function getCurrentWeather() {
 			}
 			return res.json();
 		})
-		.then(data => {
-			const weatherMain = data.weather[0].main; // Cypress checks for 'main', not 'description'
+		.then(response => {
+			// const weatherMain = data.weather[0].main; // Cypress checks for 'main', not 'description'
 			const weatherDiv = document.getElementById("weatherData");
-			weatherDiv.textContent = `Current weather in London: ${weatherMain}`;
+			weatherDiv.textContent = `Current weather in London: ${response.weather[0].main}`;
 		})
 		.catch(error => {
 			console.error('There was a problem with the fetch operation:', error);
