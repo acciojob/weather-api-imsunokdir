@@ -1,8 +1,8 @@
 const btn = document.getElementById("btn");
 
-btn.addEventListener('click', getWeatherData);
+btn.addEventListener('click', getCurrentWeather);
 
-function getWeatherData() {
+function getCurrentWeather() {
 	const city = 'London,uk';  // Match test expectation
 	const apiKey = 'e467712b257e418838be97cc881a71de'; // Match test expectation
 	const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
